@@ -60,7 +60,7 @@ public class Presentation : MonoBehaviour
         
         SetPresentationSlideTitle("スライドタイトル01", 0.2f, TextAnchor.MiddleLeft);
         yield return new WaitUntil(() => WaitTweening());
-        yield return new WaitUntil(() => WaitKey());
+        yield return new WaitForSeconds(1.0f);
 
         SetPresentationSlideMainText(
             "あああああああああああああああ\nいいいいいいいいいいいいいいい\nううううううううううううううう\nえええええええええええええええ\nおおおおおおおおおおおおおおお", 
