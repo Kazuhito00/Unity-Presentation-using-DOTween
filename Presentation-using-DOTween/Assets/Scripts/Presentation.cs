@@ -8,7 +8,6 @@ using DG.Tweening;
 public class Presentation : MonoBehaviour
 {
     [SerializeField] Sprite[] images;
-    public float changeSlideTime = 1.0f;
 
     private Image backgroundImage00;
     private Image backgroundImage01;
@@ -54,7 +53,7 @@ public class Presentation : MonoBehaviour
         yield return new WaitUntil(() => WaitKey());
 
         // スライド02 ////////////////////////////////////////////////////////////
-        SetPresentationNextSlideImage(images[1]);
+        SetPresentationNextSlideImage(images[1], 1.0f);
         yield return new WaitUntil(() => WaitTweening());
         yield return new WaitUntil(() => WaitKey());
         
@@ -71,7 +70,7 @@ public class Presentation : MonoBehaviour
         yield return new WaitUntil(() => WaitKey());
 
         // スライド03 ////////////////////////////////////////////////////////////
-        SetPresentationNextSlideImage(images[2]);
+        SetPresentationNextSlideImage(images[2], 1.0f);
         
         SetPresentationSlideTitle("スライドタイトル02", 1.0f, TextAnchor.MiddleCenter);
 
@@ -144,7 +143,7 @@ public class Presentation : MonoBehaviour
     }
 
     // プレゼンテーション：次スライド
-    private void SetPresentationNextSlideImage(Sprite nextImage)
+    private void SetPresentationNextSlideImage(Sprite nextImage, float duration)
     {
         InitializePresentationText();
 
@@ -155,13 +154,13 @@ public class Presentation : MonoBehaviour
             () => this.backgroundImage00.color,
             color => this.backgroundImage00.color = color,
             0f,
-            changeSlideTime
+            duration
         );
         DOTween.ToAlpha(
             () => this.backgroundImage01.color,
             color => this.backgroundImage01.color = color,
             1f,
-            changeSlideTime
+            duration
         ).OnComplete(() => {
             this.tweeningCount = this.tweeningCount - 1;
 
