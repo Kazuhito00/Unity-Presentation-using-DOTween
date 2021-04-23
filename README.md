@@ -1,6 +1,13 @@
 # Unity-Presentation-using-DOTween
 UnityのDOTweenアセットを用いたプレゼンテーションの試験的なサンプルです。<br><br>
-<img src="https://user-images.githubusercontent.com/37477845/115559147-637d3c00-a2ee-11eb-8751-a6dad0807372.gif" width="65%">
+<img src="https://user-images.githubusercontent.com/37477845/115559147-637d3c00-a2ee-11eb-8751-a6dad0807372.gif" width="65%"><br>
+
+ひとまず、簡易な以下の操作のみ実装しています。<br>
+今後LT等で使用していくにしたがって、不定期に機能を増やすかもしれません。<br>
+* プレゼンテーション タイトル表示
+* スライド タイトル表示
+* スライド 本文表示
+* クロスフェードでのスライド画像の切り替え
 
 # Demo
 動作確認用デモは以下。<br>
