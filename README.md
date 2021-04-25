@@ -72,6 +72,12 @@ SetPresentationSlideMainText(
 yield return new WaitUntil(() => WaitTweening());
 ```
 
+・指定時間待ち<br>
+　引数1：秒数<br>
+```
+yield return new WaitForSeconds(1.0f);
+```
+
 ・キー入力待ち(Enter、↓、PgDn、マウス左クリック)<br>
 ```
 yield return new WaitUntil(() => WaitKey());
