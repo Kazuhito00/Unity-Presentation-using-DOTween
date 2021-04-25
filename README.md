@@ -29,6 +29,54 @@ UnityのDOTweenアセットを用いたプレゼンテーションの試験的�
 ③ PresentationTitle、PresentationSlideTitle、PresentationMainText の Fontを任意のフォントに変更<br>
 <img src="https://user-images.githubusercontent.com/37477845/115728745-b541c700-a3bf-11eb-8fc8-90ebfe18c0a8.png" width="100%"><br>
 
+# Code
+「Assets/Scripts/Presentation.cs」の「PresentationCoroutine()」にプレゼンテーションの動作を記載します。
+
+・タイトル表示<br>
+　引数1：表示テキスト<br>
+　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数3：表示位置<br>
+```
+SetPresentationTitle("Unityでプレゼンテーションするサンプル", 1.0f, TextAnchor.MiddleCenter);
+```
+
+・スライド画像変更<br>
+　引数1：次画像 ※以下例はElement 1指定時<br>
+　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+```
+SetPresentationNextSlideImage(images[1], 1.0f);
+```
+
+・スライドタイトル表示<br>
+　引数1：表示テキスト<br>
+　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数3：表示位置<br>
+```
+SetPresentationSlideTitle("スライドタイトル01", 0.2f, TextAnchor.MiddleLeft);
+```
+
+・スライド本文表示<br>
+　引数1：表示テキスト<br>
+　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数3：表示位置<br>
+```
+SetPresentationSlideMainText(
+    "あああああああああああああああ\nいいいいいいいいいいいいいいい\nううううううううううううううう\nえええええええええええええええ\nおおおおおおおおおおおおおおお", 
+    1.0f,
+    TextAnchor.MiddleLeft
+);
+```
+
+・アニメーション描画待ち<br>
+```
+yield return new WaitUntil(() => WaitTweening());
+```
+
+・キー入力待ち(Enter、↓、PgDn、マウス左クリック)<br>
+```
+yield return new WaitUntil(() => WaitKey());
+```
+
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
 
