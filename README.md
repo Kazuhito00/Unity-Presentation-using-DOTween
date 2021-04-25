@@ -18,8 +18,15 @@ UnityのDOTweenアセットを用いたプレゼンテーションの試験的�
 * DOTween 1.2.420 or later<br>※リポジトリには同梱していないためアセットストアから導入してください
 
 # Preparation
+前準備として以下2点が必要です。
+1. 画像の登録(①、②)
+2. フォントの登録(③)
+
+① 画像を登録し、Texture を Type Sprite(2D and UI) に変更<br>
 <img src="https://user-images.githubusercontent.com/37477845/115728860-d73b4980-a3bf-11eb-93b7-7082ffea38bf.png" width="100%"><br>
+② EventSystem の Images に画像を設定 ※Element 0が起動時の画像になります<br>
 <img src="https://user-images.githubusercontent.com/37477845/115728709-aeb34f80-a3bf-11eb-9afc-2a5da62d09d8.png" width="100%"><br>
+③ PresentationTitle、PresentationSlideTitle、PresentationMainText の Fontを任意のフォントに変更<br>
 <img src="https://user-images.githubusercontent.com/37477845/115728745-b541c700-a3bf-11eb-8fc8-90ebfe18c0a8.png" width="100%"><br>
 
 # Author
