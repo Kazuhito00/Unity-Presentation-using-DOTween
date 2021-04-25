@@ -34,22 +34,22 @@ UnityのDOTweenアセットを用いたプレゼンテーションの試験的�
 
 ・タイトル表示<br>
 　引数1：表示テキスト<br>
-　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数2：アニメーション時間　※0.0f指定時はアニメーション無し<br>
 　引数3：表示位置<br>
 ```
 SetPresentationTitle("Unityでプレゼンテーションするサンプル", 1.0f, TextAnchor.MiddleCenter);
 ```
 
 ・スライド画像変更<br>
-　引数1：次画像 ※以下例はElement 1指定時<br>
-　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数1：次画像　※以下例はElement 1指定時<br>
+　引数2：アニメーション時間　※0.0f指定時はアニメーション無し<br>
 ```
 SetPresentationNextSlideImage(images[1], 1.0f);
 ```
 
 ・スライドタイトル表示<br>
 　引数1：表示テキスト<br>
-　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数2：アニメーション時間　※0.0f指定時はアニメーション無し<br>
 　引数3：表示位置<br>
 ```
 SetPresentationSlideTitle("スライドタイトル01", 0.2f, TextAnchor.MiddleLeft);
@@ -57,7 +57,7 @@ SetPresentationSlideTitle("スライドタイトル01", 0.2f, TextAnchor.MiddleL
 
 ・スライド本文表示<br>
 　引数1：表示テキスト<br>
-　引数2：アニメーション時間 ※0.0f指定時はアニメーション無し<br>
+　引数2：アニメーション時間　※0.0f指定時はアニメーション無し<br>
 　引数3：表示位置<br>
 ```
 SetPresentationSlideMainText(
